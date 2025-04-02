@@ -22,5 +22,5 @@ This project implements a LiDAR-based negative outlier removal algorithm, specif
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/Gaohaolong/LNOR.git
+   git clone https://github.com/hlgao01/LNOR.git
    cd LNOR
