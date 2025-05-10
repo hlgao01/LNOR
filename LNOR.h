@@ -11,8 +11,7 @@ public:
 
     LNOR(PointCloud::Ptr inputCloud,
         const TerrainGrid& terrainGrid,
-        const std::vector<std::pair<int, Eigen::Vector3f>>& pointFeature,
-        float alpha, float theta);
+        const std::vector<std::pair<int, Eigen::Vector3f>>& pointFeature);
 
     void execute();
 
@@ -23,8 +22,8 @@ private:
     PointCloud::Ptr inputCloud;
     const TerrainGrid& terrainGrid;
     std::vector<std::pair<int, Eigen::Vector3f>> pointFeature;
-    float alpha;
-    float theta;
+    float alpha = 0.5f;
+    float theta = 1.0f;
 
     PointCloud::Ptr filteredPoints;
     PointCloud::Ptr removedOutliers;
