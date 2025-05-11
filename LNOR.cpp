@@ -2,10 +2,9 @@
 
 LNOR::LNOR(PointCloud::Ptr inputCloud,
     const TerrainGrid& terrainGrid,
-    const std::vector<std::pair<int, Eigen::Vector3f>>& pointFeature,
-    float alpha, float theta)
+    const std::vector<std::pair<int, Eigen::Vector3f>>& pointFeature)
     : inputCloud(inputCloud), terrainGrid(terrainGrid),
-    pointFeature(pointFeature), alpha(alpha), theta(theta) {
+    pointFeature(pointFeature) {
     filteredPoints.reset(new PointCloud);
     removedOutliers.reset(new PointCloud);
     buildKdTree(); // Build a k-d tree at initialization
